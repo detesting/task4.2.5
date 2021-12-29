@@ -23,7 +23,7 @@ input.addEventListener('keyup', (e) => {
 // Отправка запроса
 async function send(search) {
     let response = await fetch(`https://api.github.com/search/repositories?q=${search}`)
-    response.json().then((res) => list(res.items.filter((item, index) => index < 5)))
+    await response.json().then((res) => list(res.items.filter((item, index) => index < 5)))
 }
 
 // Функция для листенера пункта из списка
