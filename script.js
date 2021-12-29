@@ -13,6 +13,7 @@ input.addEventListener('keyup', (e) => {
         if (dataRemove){
             div.removeChild(dataRemove)
         }
+
         if (search.length > 0){
             send(search)
         }
@@ -72,6 +73,10 @@ function deleteItem(e){
 function list(items){
     if (items.length){
         const div = document.querySelector('.input-project');
+        const dataRemove = document.querySelector('.input-datalist');
+        if (dataRemove){
+            div.removeChild(dataRemove)
+        }
 
         const datalist = document.createElement('ul');
         datalist.id = 'projects';
