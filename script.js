@@ -17,7 +17,7 @@ input.addEventListener('keyup', (e) => {
         if (search.length > 0){
             send(search)
         }
-    }, 300)
+    }, 200)
 })
 
 // Отправка запроса
